@@ -128,8 +128,7 @@ body {
         width: auto; /*ou width: 100%*/
     }
     .apresentacao__imagem {
-        width: 80%;
-        height: 80%;
+        width: auto;
     }
 }
 
