@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+:root {
+    --cor-primaria: #0c0d0e;
+    --cor-secundaria: #FBF2CF;
+    --cor-terciaria: #FA7070;
+
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    /* height: 100vh;  estamos comentando pois no momento em que criamos o footer, não é preciso que o body ocupe 100% da pagina mais*/
+    box-sizing: border-box; /*elemento filho encolhe para se adequar ao tamanho do conteúdo (elemento pai)*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:var(--cor-terciaria);
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+.cabecalho__menu__link:hover{
+    transform: scale(1.2);
+}
+.apresentacao__imagem {
+    width: 50%;
+}
+.titulo-destaque {
+    color:var(--cor-terciaria);
+}
+.apresentacao {
+    gap:60px;
+    padding: 3% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__titulo{
+    font-size:1.8rem;
+    font-family: var(--fonte-principal);
+}
+.apresentacao__conteudo__texto{
+    font-size:1.4rem;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao__conteudo__texto a{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-size: 1.4rem;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    text-align: center;
+}
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap:16px;
+    width: 50%;
+    text-align: center;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    padding: 21.5px 0; /*vertical e horizontal*/
+    text-decoration: none; /*tira o sublinhado que ja vem automaticamente em links*/
+    font-size: 1.4rem;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    /* background-image: linear-gradient(to right, #12354d, #081f2e); */
+    transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+.apresentacao__links__navegacao:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(to right, #FA7070, #db5656);
+}
+
+.rodape{
+    color:var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+/*Media Queries - responsividade*/
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 8%;
+    }
+    .cabecalho__menu { /*Sempre que quisermos alinhar o texto, vamos na classe Pai e aplicamos o flexbox. Nesse caso, não foi necessario aplicar aqui novamente porque já estava escrito la em cima antes do @media*/
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse; /*para colocar a imagem acima do texto*/
+        padding: 7%;
+    }
+    .apresentacao__conteudo {
+        width: auto; /*ou width: 100%*/
+    }
+}
+
+/*Podemos definir uma largura máxima de “480px” para o celular: @media (max-width: 480px), e em outra media query definir uma largura máxima de “800px” para os tablets: @media (max-width: 800px), e então atribuímos os ajustes necessários dentro de cada media query, dessa forma teremos nosso site 100% responsivo.
+Podemos também definir intervalos para os tamanhos de telas com um único media query, atribuímos o valor mínimo e depois o valor máximo separando ele pelo atributo and, veja: @media (min-width: 480px ) and (max-width: 800px), nesse caso os estilos serão aplicados em telas de no mínimo “480px” e de no máximo “800px”.*/
