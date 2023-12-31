@@ -127,9 +127,9 @@ body {
     .apresentacao__conteudo {
         width: auto; /*ou width: 100%*/
     }
-    /* .apresentacao__imagem {
+    .apresentacao__imagem {
         width: auto;
-    } */
+    }
     .apresentacao__conteudo__titulo{
         font-size:1.6rem;
     }
