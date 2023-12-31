@@ -22,11 +22,11 @@ body {
 }
 .cabecalho__menu {
     display: flex;
-    gap: 80px;
+    gap: 60px;
 }
 .cabecalho__menu__link {
     font-family: var(--fonte-secundaria);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color:var(--cor-terciaria);
     text-decoration: none;
@@ -118,13 +118,17 @@ body {
     }
     .cabecalho__menu { /*Sempre que quisermos alinhar o texto, vamos na classe Pai e aplicamos o flexbox. Nesse caso, não foi necessario aplicar aqui novamente porque já estava escrito la em cima antes do @media*/
         justify-content: center;
+        gap: 30px;
     }
     .apresentacao {
         flex-direction: column-reverse; /*para colocar a imagem acima do texto*/
-        padding: 7%;
+        padding: 5%;
     }
     .apresentacao__conteudo {
         width: auto; /*ou width: 100%*/
+    }
+    .apresentacao__imagem {
+        width: 70%;
     }
 }
 
